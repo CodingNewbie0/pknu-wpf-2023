@@ -13,13 +13,21 @@ namespace wp05_bikeshop.Logics
         // 대상에다가 표현할때 값을 변환, 표현(OneWay)
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value.ToString() + " km/h";
+            try
+            {
+                return int.Parse(value.ToString()) * 2 + " km/h";
+            }
+            catch (Exception)
+            {
+                return value.ToString() + " km/h";
+                throw;
+            }
         }
 
         // 대상값이 바뀌어서 원본(소스)의 값을 변환, 표현(TwoWay)
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return int.Parse(value.ToString()) * 3;
+            return int.Parse(value.ToString()) * 2 + " km/h";
         }
     }
 }
