@@ -14,13 +14,13 @@ namespace wp10_employeesApp.Models
             get => Salary;
             set
             {
-                {
-                    throw new Exception("급여 오류");
-                }
-                else
-                {
-                    Salary = value;
-                }
+                //{
+                //    throw new Exception("급여 오류");
+                //}
+                //else
+                //{
+                //    Salary = value;
+                //}
             } 
         }
         public string DeptName { get; set; }
