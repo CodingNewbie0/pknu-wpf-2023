@@ -49,3 +49,14 @@ Windows Presentation Foundation
 
 <img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023
 /main/images/wpf02.png" width="700" />
+
+## 7일차
+- WPF 응용
+	- 영화API 검색 앱
+		- 화면정리
+		- youtube OpenAPI
+		- DB 데이터바인딩
+		
+7일차 영화검색앱 중간작업
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023
+/main/images/wpf03.gif" width="700" />
