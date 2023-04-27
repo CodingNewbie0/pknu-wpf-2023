@@ -73,7 +73,7 @@ namespace wp11_movieFinder
         // 실제 검색메서드
         private async void SearchMovie(string movieName)
         {
-            string tmdb_apiKey = "2afb7029a3cbdcaf0f965bf5f7e5c97a";
+            string tmdb_apiKey = "내 TMDB 키";
             string encoding_movieName = HttpUtility.UrlEncode(movieName, Encoding.UTF8);
             string openApiUri = $"https://api.themoviedb.org/3/search/movie?api_key={tmdb_apiKey}" +
                                 $"&language=ko-KR&page=1&include_adult=false&query={encoding_movieName}"; // 영화 검색 URL
@@ -234,74 +234,6 @@ namespace wp11_movieFinder
         //}
         #endregion
 
-        #region < MySQL 테스트 >
-        //try
-        //{
-        //    // DB 연결확인
-        //    using (MySqlConnection conn = new MySqlConnection(Commons.myConnString))
-        //    {
-        //        if (conn.State == ConnectionState.Closed) conn.Open();
-        //         
-        //        var query = @"INSERT INTO FavoriteMovieItem
-        //                                   ( Id
-        //                                   , Title
-        //                                   , Original_Title
-        //                                   , Release_Date
-        //                                   , Original_Language
-        //                                   , Adult
-        //                                   , Popularity
-        //                                   , Vote_Average
-        //                                   , Poster_Path
-        //                                   , OverView
-        //                                   , Reg_Date )
-        //                             VALUES
-        //                                   ( @Id
-        //                                   , @Title
-        //                                   , @Original_Title
-        //                                   , @Release_Date
-        //                                   , @Original_Language
-        //                                   , @Adult
-        //                                   , @Popularity
-        //                                   , @Vote_Average
-        //                                   , @Poster_Path
-        //                                   , @OverView
-        //                                   , @Reg_Date ) ";
-
-        //        var insRes = 0;
-        //        foreach (FavoriteMovieItem item in list)
-        //        {
-        //            MySqlCommand cmd = new MySqlCommand(query, conn);
-        //            cmd.Parameters.AddWithValue("@Id", item.Id);
-        //            cmd.Parameters.AddWithValue("@Title", item.Title);
-        //            cmd.Parameters.AddWithValue("@Original_Title", item.Original_Title);
-        //            cmd.Parameters.AddWithValue("@Release_Date", item.Release_Date);
-        //            cmd.Parameters.AddWithValue("@Original_Language", item.Original_Language);
-        //            cmd.Parameters.AddWithValue("@Adult", item.Adult);
-        //            cmd.Parameters.AddWithValue("@Popularity", item.Popularity);
-        //            cmd.Parameters.AddWithValue("@Vote_Average", item.Vote_Average);
-        //            cmd.Parameters.AddWithValue("@Poster_Path", item.Poster_Path);
-        //            cmd.Parameters.AddWithValue("@OverView", item.OverView);
-        //            cmd.Parameters.AddWithValue("@Reg_Date", DateTime.Now);
-
-        //            insRes += cmd.ExecuteNonQuery();
-        //        }
-
-        //        if (list.Count == insRes)
-        //        {
-        //            await Commons.ShowMessageAsync("저장", "DB저장성공");
-        //        }
-        //        else
-        //        {
-        //            await Commons.ShowMessageAsync("저장", "DB저장오류 관리자에게 문의하세요.");
-        //        }
-        //    }
-        //}
-        //catch (Exception ex)
-        //{
-        //    await Commons.ShowMessageAsync("오류", $"DB저장 오류{ex.Message}");
-        //}
-        #endregion
-
         // 검색결과 중에서 자신이 좋아하는 영화 저장
         private async void BtnAddFavorite_Click(object sender, RoutedEventArgs e)
         {
@@ -317,6 +249,75 @@ namespace wp11_movieFinder
                 return;
             }
 
+            #region < MySQL 연결 >
+            //try
+            //{
+            //    // DB 연결확인
+            //    using (MySqlConnection conn = new MySqlConnection(Commons.myConnString))
+            //    {
+            //        if (conn.State == ConnectionState.Closed) conn.Open();
+            //         
+            //        var query = @"INSERT INTO FavoriteMovieItem
+            //                                   ( Id
+            //                                   , Title
+            //                                   , Original_Title
+            //                                   , Release_Date
+            //                                   , Original_Language
+            //                                   , Adult
+            //                                   , Popularity
+            //                                   , Vote_Average
+            //                                   , Poster_Path
+            //                                   , OverView
+            //                                   , Reg_Date )
+            //                             VALUES
+            //                                   ( @Id
+            //                                   , @Title
+            //                                   , @Original_Title
+            //                                   , @Release_Date
+            //                                   , @Original_Language
+            //                                   , @Adult
+            //                                   , @Popularity
+            //                                   , @Vote_Average
+            //                                   , @Poster_Path
+            //                                   , @OverView
+            //                                   , @Reg_Date ) ";
+
+            //        var insRes = 0;
+            //        foreach (FavoriteMovieItem item in list)
+            //        {
+            //            MySqlCommand cmd = new MySqlCommand(query, conn);
+            //            cmd.Parameters.AddWithValue("@Id", item.Id);
+            //            cmd.Parameters.AddWithValue("@Title", item.Title);
+            //            cmd.Parameters.AddWithValue("@Original_Title", item.Original_Title);
+            //            cmd.Parameters.AddWithValue("@Release_Date", item.Release_Date);
+            //            cmd.Parameters.AddWithValue("@Original_Language", item.Original_Language);
+            //            cmd.Parameters.AddWithValue("@Adult", item.Adult);
+            //            cmd.Parameters.AddWithValue("@Popularity", item.Popularity);
+            //            cmd.Parameters.AddWithValue("@Vote_Average", item.Vote_Average);
+            //            cmd.Parameters.AddWithValue("@Poster_Path", item.Poster_Path);
+            //            cmd.Parameters.AddWithValue("@OverView", item.OverView);
+            //            cmd.Parameters.AddWithValue("@Reg_Date", DateTime.Now);
+
+            //            insRes += cmd.ExecuteNonQuery();
+            //        }
+
+            //        if (list.Count == insRes)
+            //        {
+            //            await Commons.ShowMessageAsync("저장", "DB저장성공");
+            //        }
+            //        else
+            //        {
+            //            await Commons.ShowMessageAsync("저장", "DB저장오류 관리자에게 문의하세요.");
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    await Commons.ShowMessageAsync("오류", $"DB저장 오류{ex.Message}");
+            //}
+            #endregion
+
+            #region < MySQL 연결 >
             try
             {
                 // DB 연결확인
@@ -384,6 +385,8 @@ namespace wp11_movieFinder
             {
                 await Commons.ShowMessageAsync("오류", $"DB저장 오류{ex.Message}");
             }
+#endregion
+
         }
 
         private async void BtnViewFavorite_Click(object sender, RoutedEventArgs e)
