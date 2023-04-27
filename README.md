@@ -28,8 +28,7 @@ Windows Presentation Foundation
 	
 4일차 MVVM View
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023
-/main/images/wpf01.png" width="700" />
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf01.png" width="700" />
 	
 ## 5일차
 - WPF 응용
@@ -47,8 +46,7 @@ Windows Presentation Foundation
 		
 6일차 영화검색앱 중간
 
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023
-/main/images/wpf02.png" width="700" />
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf02.png" width="700" />
 
 ## 7일차
 - WPF 응용
@@ -58,5 +56,12 @@ Windows Presentation Foundation
 		- DB 데이터바인딩
 		
 7일차 영화검색앱 중간작업
-<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023
-/main/images/wpf03.gif" width="700" />
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf03.gif" width="700" />
+
+## 8일차
+- WPF 응용
+	- 영화API 검색 앱 완성
+		- DB 데이터바인딩
+
+8일차 영화검색앱
+<img src="https://raw.githubusercontent.com/hugoMGSung/pknu-wpf-2023/main/images/wpf04.gif" width="700" />
