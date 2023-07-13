@@ -56,6 +56,7 @@ Windows Presentation Foundation
 		- DB 데이터바인딩
 		
 7일차 영화검색앱 중간작업
+
 <img src="https://raw.githubusercontent.com/CodingNewbie0/pknu-wpf-2023/main/images/wpf03.gif" width="700" />
 
 ## 8일차
@@ -64,10 +65,18 @@ Windows Presentation Foundation
 		- DB 데이터바인딩
 	- 미세먼지확인 앱
 
-영화검색 앱 완료
-<img src="https://raw.githubusercontent.com/CodingNewbie0/pknu-wpf-2023/main/images/wpf04.gif" width="700" />
+!!!!!!!!!!!영화검색 앱 완료!!!!!!!!!!!!
+
+DB연동 후 WPF 앱 정상작동확인
+
+<img src="https://github.com/CodingNewbie0/pknu-wpf-2023/blob/main/images/API_Movie_Search_App1.gif?raw=true" width="700" />
+
+유튜브 검색기능 작동확인
+
+<img src="https://github.com/CodingNewbie0/pknu-wpf-2023/blob/main/images/API_Movie_Search_App2.gif?raw=true" width="700" />
 
 미세먼지확인 앱 중간작업
+
 <img src="https://raw.githubusercontent.com/CodingNewbie0/pknu-wpf-2023/main/images/wpf05.png" width="700" />
 
 
@@ -83,4 +92,5 @@ Windows Presentation Foundation
 		- 기타 OpenAPI
 
 미세먼지확인 앱
+
 <img src="https://raw.githubusercontent.com/CodingNewbie0/pknu-wpf-2023/main/images/wpf06.gif" width="700" />
